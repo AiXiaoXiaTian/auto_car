@@ -17,7 +17,7 @@ public class RecordImpl implements Record {
     }
 
     public RecordImpl(RecordBuilder builder) {
-        id = id++;
+        id += 1;
         recordType = builder.getCommand().getCommandType();
         record = builder.getCommand().getCommandRecord();
         recordMsg = createRecordMsg();
